@@ -14,10 +14,12 @@ namespace WindowsFormsApplication4
 {
     public partial class Form2 : Form
     {
+        string user1;
         public Form2(string user)
         {
             InitializeComponent();
             label1.Text = "Hello "+user;
+            user1 = user;
 
         }
 
@@ -116,6 +118,32 @@ namespace WindowsFormsApplication4
        {
            message.Text = "";
            message.ForeColor = Color.Black;
+       }
+
+       private void button2_Click(object sender, EventArgs e)
+       {
+           string content = "user="+ user1;
+
+           string URL = "http://localhost/pro/note/index2.php";
+           string URI = "http://k3k.bugs3.com/note/index2.php";
+
+           HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI);
+           request.Method = "POST";
+           byte[] byteArray = Encoding.UTF8.GetBytes(content);
+           request.ContentType = "application/x-www-form-urlencoded";
+           request.ContentLength = byteArray.Length;
+           Stream dataStream = request.GetRequestStream();
+
+           dataStream.Write(byteArray, 0, byteArray.Length);
+           dataStream.Close();
+           WebResponse response = request.GetResponse();
+           dataStream = response.GetResponseStream();
+           StreamReader reader = new StreamReader(dataStream);
+           string responseFromServer = HttpUtility.UrlDecode(reader.ReadToEnd()).Split('<')[0];
+
+
+
+           MessageBox.Show(responseFromServer);
        }
         
     }

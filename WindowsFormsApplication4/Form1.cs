@@ -89,8 +89,8 @@ namespace WindowsFormsApplication4
             StreamReader reader = new StreamReader(dataStream);
             string responseFromServer = HttpUtility.UrlDecode(reader.ReadToEnd()).Split('<')[0];
 
-
-            if (responseFromServer == "#false")
+            //MessageBox.Show(responseFromServer);
+            if (responseFromServer == "#false"||responseFromServer=="")
             {
                 //MessageBox.Show("Either Email or Password is wrong");
                 pass.Clear();
