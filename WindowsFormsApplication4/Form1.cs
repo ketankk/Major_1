@@ -80,11 +80,30 @@ namespace WindowsFormsApplication4
             byte[] byteArray = Encoding.UTF8.GetBytes(content);
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = byteArray.Length;
-            Stream dataStream = request.GetRequestStream();
+            Stream dataStream = null;
+            try
+            {
+                dataStream = request.GetRequestStream();
+            }
+            catch (WebException w)
+            {
+                MessageBox.Show("Could not connect to the internet! Please check your internet connection.");
+                return;
+            }
 
             dataStream.Write(byteArray, 0, byteArray.Length);
             dataStream.Close();
-            WebResponse response = request.GetResponse();
+            WebResponse response = null;
+            try
+            {
+                response = request.GetResponse();
+            }
+            catch (WebException w)
+            {
+                MessageBox.Show("Server is down! Please try again later");
+                
+                return;
+            }
             dataStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
             string responseFromServer = HttpUtility.UrlDecode(reader.ReadToEnd()).Split('<')[0];
@@ -119,5 +138,6 @@ namespace WindowsFormsApplication4
             response.Close();
 
         }
+
     }
 }
