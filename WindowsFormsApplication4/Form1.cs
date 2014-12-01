@@ -22,58 +22,13 @@ namespace WindowsFormsApplication4
 
         }
 
-
-
-        private void email_Click(object sender, EventArgs e)
-        {
-
-        }
-        //Sets the property of all objects used after form loads
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-        //Logo of DTU
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void password_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dept_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        //Password input box
-        private void pass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void email1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void login_Click(object sender, EventArgs e)
         {
 
             string tag = "login";
             string content = "tag=" + tag + "&email=" + email1.Text + "&password=" + pass.Text;
 
-            string URL = "http://localhost/pro/desktop2/index.php";
-            string URI = "http://k3k.bugs3.com/desktop2/index.php";
+            string URI = "http://dcetech.com/sagnik/vnb/desktop/login.php";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI);
             request.Method = "POST";
@@ -100,7 +55,7 @@ namespace WindowsFormsApplication4
             }
             catch (WebException w)
             {
-                MessageBox.Show("Server is down! Please try again later");
+                MessageBox.Show("Server is down! Please try again later" + w);
                 
                 return;
             }
@@ -138,6 +93,5 @@ namespace WindowsFormsApplication4
             response.Close();
 
         }
-
     }
 }
