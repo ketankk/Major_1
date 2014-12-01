@@ -30,3 +30,14 @@ C:\Users\scarecrow\Desktop\Major_1\WindowsFormsApplication4\obj\x86\Debug\Window
 C:\Users\scarecrow\Desktop\Major_1\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Properties.Resources.resources
 C:\Users\scarecrow\Desktop\Major_1\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\scarecrow\Desktop\Major_1\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.exe
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.pdb
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Form2.resources
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\scarecrow\Desktop\vnb\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
