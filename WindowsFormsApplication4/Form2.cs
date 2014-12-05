@@ -75,31 +75,6 @@ namespace WindowsFormsApplication4
                     MessageBox.Show(responseFromServer);
                 }
         }
-
-       private void button2_Click(object sender, EventArgs e)
-       {
-           return;
-
-           string content = "user="+ user1;
-
-           string URL = "http://localhost/pro/note/index2.php";
-           string URI = "http://k3k.bugs3.com/note/index2.php";
-
-           HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI);
-           request.Method = "POST";
-           byte[] byteArray = Encoding.UTF8.GetBytes(content);
-           request.ContentType = "application/x-www-form-urlencoded";
-           request.ContentLength = byteArray.Length;
-           Stream dataStream = request.GetRequestStream();
-
-           dataStream.Write(byteArray, 0, byteArray.Length);
-           dataStream.Close();
-           WebResponse response = request.GetResponse();
-           dataStream = response.GetResponseStream();
-           StreamReader reader = new StreamReader(dataStream);
-           string responseFromServer = HttpUtility.UrlDecode(reader.ReadToEnd()).Split('<')[0];
-           MessageBox.Show(responseFromServer);
-       }
         
     }
 }
